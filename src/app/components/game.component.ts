@@ -14,8 +14,8 @@ export class GameComponent {
   gamesPerPage!: number
 
   games!: Game[]
-  private currentPage = 1
-  private currentIndex = 0
+  currentPage = 1
+  currentIndex = 0
 
   // service cannot be instantiated like this
   // gameService! :GameService

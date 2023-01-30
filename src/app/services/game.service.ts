@@ -8,7 +8,7 @@ import { Game } from '../models/Game';
 })
 export class GameService {
 
-  URL = "aromatic-dogs-production.up.railway.app/games"
+  URL = "https://aromatic-dogs-production.up.railway.app/games"
 
   constructor(private httpClient: HttpClient) { }
 
@@ -21,7 +21,7 @@ export class GameService {
       .set("content-type", "application/json")
       .set("Access-Control-Allow-Origin", "*")
 
-    return this.httpClient.get<any>(this.URL, {params: queryParams, headers: headers})
+    return this.httpClient.get(this.URL, {params: queryParams, headers: headers})
   }
 
  
