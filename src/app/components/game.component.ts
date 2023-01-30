@@ -55,6 +55,7 @@ export class GameComponent {
     const resp$ = this.gameService.getGames(this.gamesPerPage, this.currentIndex)
     const result = resp$.subscribe(data => {
       this.games = data['games'],
+      console.info(data),
       console.info(this.games)}
       )
   }
