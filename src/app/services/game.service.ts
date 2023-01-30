@@ -8,7 +8,7 @@ import { Game } from '../models/Game';
 })
 export class GameService {
 
-  URL = "http://localhost:8080/games"
+  URL = "aromatic-dogs-production.up.railway.app/games"
 
   constructor(private httpClient: HttpClient) { }
 
