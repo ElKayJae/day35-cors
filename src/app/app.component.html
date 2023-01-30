@@ -1,0 +1,10 @@
+<h1>Board Games</h1>
+<form [formGroup]="form">
+  Games per page
+  <select formControlName="noOfPages" (change)="changeNoOfPages()">
+    <option *ngFor="let i of itemsPerPage" [value]="i">{{i}}</option>
+  </select>
+</form>
+
+
+<app-game [gamesPerPage]="noPerPage"></app-game>
