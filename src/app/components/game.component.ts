@@ -29,7 +29,7 @@ export class GameComponent {
     console.log("gamesPerPage>>>>>>", this.gamesPerPage, "currentPage>>>>>>", this.currentPage)
     const resp$ = this.gameService.getGames(this.gamesPerPage, this.currentIndex)
     const result = resp$.subscribe(data => {
-      this.games = data['games'],
+      this.games = data['games'];
       console.info(this.games)}
       )
   }
@@ -43,7 +43,7 @@ export class GameComponent {
     console.log("gamesPerPage>>>>>>", this.gamesPerPage, "currentPage>>>>>>", this.currentPage)
     const resp$ = this.gameService.getGames(this.gamesPerPage, this.currentIndex)
     const result = resp$.subscribe(data => {
-      this.games = data['games'],
+      this.games = data['games'];
       console.info(this.games)}
       )
   }
@@ -54,9 +54,9 @@ export class GameComponent {
     console.log("gamesPerPage>>>>>>", this.gamesPerPage, "currentPage>>>>>>", this.currentPage)
     const resp$ = this.gameService.getGames(this.gamesPerPage, this.currentIndex)
     const result = resp$.subscribe(data => {
-      const gamesData = JSON.parse(data),
-      this.games = gamesData['games'],
-      console.info(data),
+      const gamesData = JSON.parse(data);
+      this.games = gamesData['games'];
+      console.info(data);
       console.info(this.games)}
       )
   }
