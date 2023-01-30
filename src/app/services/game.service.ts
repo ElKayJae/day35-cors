@@ -13,7 +13,6 @@ export class GameService {
 
   getGames(limit: number, offset: number): Observable<any>{
 
-    console.info("inside gameService.getGamess()")
     const queryParams = new HttpParams()
       .set("limit", limit)
       .set("offset", offset);
@@ -22,6 +21,7 @@ export class GameService {
       .set("content-type", "application/json")
       .set("Access-Control-Allow-Origin", "*")
 
+      //error in parsing JSON so set responseType as text, convert to json in later steps
     return this.httpClient.get(this.URL, {params: queryParams, headers: headers, responseType: 'text'})
   }
 
